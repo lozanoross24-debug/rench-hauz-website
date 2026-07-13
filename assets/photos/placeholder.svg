@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101b42"/>
+      <stop offset="100%" stop-color="#1f2a5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#g)" />
+  <g opacity="0.9" transform="translate(80 120)">
+    <rect x="0" y="0" width="1040" height="560" rx="40" fill="#0a1326" />
+    <rect x="36" y="36" width="968" height="488" rx="30" fill="rgba(255,255,255,0.08)" />
+  </g>
+  <text x="600" y="440" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="72" fill="#fff">Photo placeholder</text>
+  <text x="600" y="520" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="32" fill="#d7dce8">Professional visuals coming soon</text>
+</svg>
