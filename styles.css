@@ -7,8 +7,8 @@
   --accent: #ff4c20;
   --accent-soft: #fff0e8;
   --border: #d7dce8;
-  --shadow: 0 36px 90px rgba(16, 27, 66, 0.09);
-  --max-width: 1140px;
+  --shadow: 0 40px 120px rgba(16, 27, 66, 0.10);
+  --max-width: 1200px;
 }
 
 ::selection {
@@ -28,10 +28,12 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at top left, rgba(255,76,32,0.08), transparent 22%), #eef1f7;
+  font-family: 'Sora', 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(circle at top left, rgba(255,76,32,0.06), transparent 22%), #eef1f7;
   color: var(--text);
-  line-height: 1.75;
+  line-height: 1.6;
 }
 
 img, video {
@@ -71,7 +73,7 @@ body::before {
   justify-content: space-between;
   gap: 1.5rem;
   padding: 1rem clamp(1rem, 3vw, 2rem);
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.94);
   border-bottom: 1px solid rgba(16,27,66,0.08);
   backdrop-filter: blur(18px);
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
@@ -85,6 +87,7 @@ body.scrolled .site-header {
 .site-header nav a {
   position: relative;
   color: var(--muted);
+  font-weight: 600;
   transition: color 0.25s ease;
 }
 
@@ -125,18 +128,18 @@ body.scrolled .site-header {
 }
 
 .brand img {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
-  border-radius: 14px;
+  border-radius: 12px;
   background: white;
-  padding: 0.35rem;
+  padding: 0.45rem;
 }
 
 .brand strong {
   display: block;
-  font-size: 0.95rem;
-  letter-spacing: 0.14em;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -192,17 +195,23 @@ header nav.is-open a {
   padding: 0.75rem 1rem;
   border-radius: 12px;
   border: 1px solid rgba(255,76,32,0.12);
-  background: var(--accent);
+  background: linear-gradient(90deg,var(--accent),#ff6a3a);
   color: white;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.09em;
-  box-shadow: none;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+  box-shadow: 0 8px 28px rgba(255,76,32,0.12);
+  transition: transform 0.18s cubic-bezier(.2,.9,.2,1), box-shadow 0.18s ease, opacity 0.18s ease;
 }
 
 .button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 48px rgba(255,76,32,0.16);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 6px 32px rgba(255,76,32,0.18), 0 0 0 4px rgba(255,76,32,0.06);
 }
 
 .button-small {
@@ -1322,7 +1331,7 @@ video,
 footer {
   margin-top: 3rem;
   padding: 3.5rem 2rem;
-  background: linear-gradient(180deg, #0d1530 0%, #101b42 100%);
+  background: linear-gradient(180deg,#07102a 0%,#0d1530 50%,#101b42 100%);
   color: #e5e9f3;
 }
 
