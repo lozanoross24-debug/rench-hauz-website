@@ -189,14 +189,16 @@ header nav.is-open a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.95rem 1.6rem;
-  border-radius: 999px;
-  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,76,32,0.12);
   background: var(--accent);
   color: white;
   font-weight: 700;
-  box-shadow: 0 18px 35px rgba(255,76,32,0.2);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  box-shadow: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
 }
 
 .button:hover {
@@ -253,10 +255,32 @@ header nav.is-open a {
 }
 
 .trust-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.trust-row > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.65rem 0.9rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(16,27,66,0.06);
+}
+
+.trust-row strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.trust-row small {
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .trust-row div {
@@ -541,13 +565,20 @@ main {
   animation-duration: 13s;
 }
 
+.hero {
+  position: relative;
+  padding: 4rem 1rem 3rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f1941 0%, #172f5f 52%, #19345f 100%);
+}
+
 .hero-content,
 .hero-card {
   position: relative;
 }
 
 .hero-content {
-  max-width: 680px;
+  max-width: 720px;
   margin: 0 auto;
   padding-top: 4rem;
   color: white;
@@ -564,9 +595,10 @@ main {
 
 .hero-content h1 {
   font-size: clamp(3rem, 6vw, 4.6rem);
-  line-height: 0.98;
+  line-height: 1.02;
   margin: 0;
   max-width: 12ch;
+  color: white;
   transform: translateY(0);
   opacity: 1;
 }
@@ -619,6 +651,19 @@ main {
   color: white;
   transform: translateY(10px);
   transition: transform 0.55s ease, box-shadow 0.55s ease;
+  z-index: 2;
+}
+
+@media (max-width: 1280px) {
+  .hero-card {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 2rem;
+    transform: translateY(0);
+    box-shadow: 0 30px 70px rgba(16,27,66,0.16);
+  }
 }
 
 .hero-card:hover {
@@ -656,12 +701,15 @@ main {
 }
 
 .section {
-  padding: 4.5rem 0;
+  padding: 5rem 0;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 .section-heading {
   max-width: 700px;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  text-align: center;
 }
 
 .section-heading h2 {
@@ -1130,11 +1178,15 @@ video,
 
 .quote {
   padding: 4rem 2rem;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .quote-box {
   background: #f8fafc;
   border-radius: 28px;
+  max-width: 760px;
+  margin: 0 auto;
   box-shadow: var(--shadow);
   padding: 2rem;
   border: 1px solid rgba(16,27,66,0.08);
@@ -1224,6 +1276,8 @@ video,
 
 .booking {
   padding: 4rem 2rem;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .booking a {
@@ -1234,13 +1288,16 @@ video,
 .booking form {
   display: grid;
   gap: 1rem;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .booking form label {
   display: grid;
   gap: 0.45rem;
   color: var(--text);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .booking form input,
@@ -1250,6 +1307,7 @@ video,
   border: 1px solid rgba(16,27,66,0.12);
   border-radius: 16px;
   background: white;
+  color: var(--text);
 }
 
 .booking form button {
